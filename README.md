@@ -6,3 +6,4 @@
 <p><a href = "https://github.com/shinseogyong/DailyLecture/blob/main/Interface_Ex01.java">자습시간 활용: 인터페이스와 추상클래스 구현 연습</a></p>
 <br>
 <h2>6월 29일</h2>
+<p>10진수 2진수 8진수 16진수 전환</p>
