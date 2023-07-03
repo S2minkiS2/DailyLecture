@@ -26,5 +26,5 @@ public class Ex01_for {
 		System.out.println("=============================");
 		
 	}
-
+	
 }
