@@ -19,7 +19,8 @@
 <br>
 
 <h2>7월 3일 </h2>
-<p><a > </a></p>
+<p><a href = "https://github.com/shinseogyong/DailyLecture/blob/main/07.03/Ex05_max_number.java">Integer.MIN_VALUE; 활용법 </a></p>
+<p><a href = "https://github.com/shinseogyong/DailyLecture/blob/main/07.03/Ex01_for.java">for 기초 1강 </a></p>
 <br>
 
 <h2>7월 4일 </h2>
