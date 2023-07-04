@@ -26,7 +26,7 @@
 <p><a href = "https://github.com/shinseogyong/DailyLecture/blob/main/07.03/Ex04_break_continue.java">for 기초 4강_continue와 break</a></p>
 <p><a href = "https://github.com/shinseogyong/DailyLecture/blob/main/07.03/Ex05_for_exam.java">for 기초 5강_배수 구하</a></p>
 <p><a href = "https://github.com/shinseogyong/DailyLecture/blob/main/07.03/Ex05_max_number.java">for 기초 5강_2_가장 큰수 구하기_Integer.MIN_VALUE </a></p>
-<p><a href = "https://github.com/shinseogyong/DailyLecture/blob/main/07.03/Ex06_for_drawingStar.java">for 기초 6강_별 그리기(미완)</a></p>
+<p><a href = "https://github.com/shinseogyong/DailyLecture/blob/main/07.03/Ex06_for_drawingStar.java">for 기초 6강_별 그리기</a></p>
 <br>
 
 <h2>7월 4일 </h2>
