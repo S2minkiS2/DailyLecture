@@ -1,0 +1,151 @@
+
+public class Ex07_for_star_exam {
+
+	public static void main(String[] args) {
+		
+		/* 문제1 --------------------
+		***** : *5번 + 줄바꿈
+		****  : *4번
+		***   : *3번
+		**
+		*
+		----------------------------*/
+		
+		for(int i = 1; i <= 5; i++) {
+			for(int s = 5; s >= i; s--) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		System.out.println("-----------------------------");
+		
+		/* 문제2---------------------
+		     * : 빈칸 4 + * 1개 + 줄바꿈
+		    ** : 빈칸 3 + * 2개 + 줄바꿈
+		   *** : 빈칸 2 + * 3개 + 줄바꿈
+		  **** : 빈칸 1 +   4개
+		 ***** : 빈칸 0 +   5개
+		 --------------------------*/
+		
+		for(int i =1; i <= 5; i++) { //총 줄 수
+			
+			for(int k = 5; k > i; k--) { //공백 출력
+				System.out.print(" ");
+			}
+			// for문 안에 for문 두개를 형제처럼 놓을 수 있다.
+			for(int s = 1; s <= i; s++) { // 별 출력
+				System.out.print("*");
+			}
+			
+			System.out.println();
+		}
+		
+		
+		System.out.println("-----------------------------------");
+		
+		/* 문제3---------------------
+		 ***** 
+		  ****
+		   ***
+		    **
+		     *
+		 --------------------------*/
+		
+		for(int line = 1; line <= 5; line++) {
+			
+			for(int space = 1; space < line; space++) { // space가 1부터 시작해서 1씩 증가해서 line 수까지 
+				System.out.print(" ");
+			}
+			
+			for(int star = 5; star >= line; star--) {
+				System.out.print("*");
+			}
+			
+			System.out.println();
+		}
+		
+		System.out.println("-----------------------------------");
+		
+		/* 문제4---------------------
+		  1         : 1 + 빈칸1
+		  1 2       : 1 + 빈칸 + 2 + 빈칸
+		  1 2 3     :
+		  1 2 3 4   :
+		 --------------------------*/
+		
+		int n = 1;
+		
+		for(int line = 1; line <= 4; line++) {
+			for(n = 1; n <= line; n++) {
+				System.out.print(n);
+				System.out.print(" ");
+			}
+			
+			System.out.println();
+		}
+		
+		System.out.println("-----------------------------------");
+		
+		/* 문제5---------------------
+		 1
+		 2 3
+		 4 5 6 
+		 7 8 9 10
+		 --------------------------*/
+		
+		int no = 1;
+		
+		for(int line = 1; line <= 4; line++) {
+			for(int a = 1; a <= line; a++) {
+				System.out.print(no);
+				System.out.print(" ");
+				no++;
+			}
+			System.out.println();
+		}
+		
+		
+		System.out.println("-----------------------------------");
+		
+		/* 문제6---------------------
+		 1 2 3 4 5
+		 1 2 3 4 5
+		 1 2 3 4 5 
+		 1 2 3 4 5
+		 --------------------------*/
+		
+		int n2 = 1;
+		
+		for(int line = 1; line <= 4; line++) {
+			for(n2 = 1; n2 <= 5; n2++) {
+				System.out.print(n2);
+				System.out.print(" ");
+			}
+			System.out.println();
+		}
+		
+		System.out.println("-----------------------------------");
+		
+		/* 문제6---------------------
+		 1 1 1 1 1
+		 2 2 2 2 2
+		 3 3 3 3 3 
+		 4 4 4 4 4
+		--------------------------*/
+		
+		int no3 = 1;
+		
+		for(int line = 1; line <= 4; line++) {
+			for(int re = 1; re <= 5; re++) {
+				System.out.print(no3);
+				System.out.print(" ");
+			}
+			no3++;
+			System.out.println();
+		}
+		
+		
+		
+	}
+}
