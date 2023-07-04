@@ -30,7 +30,7 @@
 <br>
 
 <h2>7월 4일 </h2>
-<p><a > </a></p>
+<p><a href = "https://github.com/shinseogyong/DailyLecture/blob/main/07.04/for_hard_exam"> for 어려운 문제 풀이 </a></p>
 <br>
 
 <h2>7월 5일 </h2>
