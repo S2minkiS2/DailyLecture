@@ -31,6 +31,7 @@
 
 <h2>7월 4일 </h2>
 <p><a href = "https://github.com/shinseogyong/DailyLecture/blob/main/07.04/for_hard_exam"> for 어려운 문제 풀이 </a></p>
+<p><a href = "https://github.com/shinseogyong/DailyLecture/blob/main/07.04/Ex09_for_gugudan2.java"> for 구구단 어려운 정렬 </a></p>
 <br>
 
 <h2>7월 5일 </h2>
