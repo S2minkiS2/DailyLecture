@@ -35,7 +35,7 @@
 <br>
 
 <h2>7월 5일 </h2>
-<p><a href = "07.05/Car.java">car 클래스를 이용한 </a> _ <a href = "07.05/CarMain.java"> 객체 만들기 (인스턴스 생성) </a></p>
+<p><a href = "07.05/Car.java">car 클래스를 이용한 </a> / <a href = "07.05/CarMain.java"> 객체 만들기 (인스턴스 생성) </a></p>
 <br>
 
 <h2>7월 6일 </h2>
