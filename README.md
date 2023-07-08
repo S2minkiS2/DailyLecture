@@ -45,7 +45,10 @@
 <br>
 
 <h2>7월 7일 </h2>
-<p><a > </a></p>
+<p><a href = "07.07/Ex02_array_exam.java">배열 2_저장 출력 합계구하기 </a></p>
+<p><a href = "07.07/Ex03_array_star.java">배열 3_배열로 별 찍기</a></p>
+<p><a href = "07.07/Ex04_array_swap.java">배열 3_배열 양끝 인덱스 상호교환 for문</a></p>
+<p><a href = "07.07/Ex05_array_lotto.java">배열 4_로또 번호 생성기(이것만 복습해도 돼요)</a></p>
 <br>
 
 <h2>7월 8일 </h2>
