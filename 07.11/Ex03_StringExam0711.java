@@ -21,7 +21,7 @@ public class Ex03_StringExam0711 {
 		} else {
 			System.out.println("입력이 잘못 되었습니다.");
 		}
-		
+		System.out.println(str.length()); //쉬운 방법도 있다. 생각하자.
 		
 		// -위치: 7번째 여부 확인
 		System.out.println("'-'의 위치는 7번째가 맞는가? : " + (str.indexOf('-')+1 == 7));
