@@ -59,11 +59,15 @@
 <br>
 
 <h2>7월 11일 </h2>
-<p><a > </a></p>
+<p><a href = "07.11/ArrayTwoDimension2.java" >2차 배열_기초 </a></p>
+<p><a href = "07.11/Ex01_String_basic.java">String 문자열 1_기초</a></p>
+<p><a href = "07.11/Ex02_String_method.java">String 문자열 2_메서드</a></p>
 <br>
 
 <h2>7월 12일 </h2>
-<p><a > </a></p>
+<p><a href = "07.11/Ex03_StringExam0711.java">String 문자열 3_메서드 테스트</a></p>
+<p><a href = "07.12/Ex04_String_array.java">String 문자열 4_문자열 배열</a></p>
+<p><a href = "07.12/Ex04_String_array_exam.java">String 문자열 5_문자열 배열 테스트</a></p>
 <br>
 
 <h2>7월 13일 </h2>
