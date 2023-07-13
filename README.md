@@ -71,7 +71,10 @@
 <br>
 
 <h2>7월 13일 </h2>
-<p><a > </a></p>
+<p><a href = "07.13/Ex01_StringBuffer.java"> String 6_ Buffer</a></p>
+<p><a href = "07.13/Ex02_StringBuilder.java"> String 7_Builder</a></p>
+<p><a href = "07.13/Ex03_StringTokenizer.java"> String 8_split() 과 StringTokenizer </a></p>
+<p><a href = "07.13/Ex04_String_controls_exam.java"> String 클래스 총 실습문제</a></p>
 <br>
 
 <h2>7월 14일 </h2>
