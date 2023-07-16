@@ -77,10 +77,6 @@
 <p><a href = "07.13/Ex04_String_controls_exam.java"> String 클래스 총 실습문제</a></p>
 <br>
 
-<h2>7월 14일 </h2>
-<p><a > </a></p>
-<br>
-
 <h2>7월 17일 </h2>
 <p><a > </a></p>
 <br>
