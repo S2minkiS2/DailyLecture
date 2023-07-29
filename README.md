@@ -78,11 +78,13 @@
 <br>
 
 <h2>7월 17일 </h2>
-<p><a > </a></p>
+<p><a href = "07.17/Ex02_wrapper_Cahracter.java"> wrapper_Character 포함 유무 검사 </a></p>
+<p><a href = "07.17/student.java">정석적인 VO 예시 </a></p>
 <br>
 
 <h2>7월 18일 </h2>
-<p><a > </a></p>
+<p><a href = "07.18/ex02_extends/Mp3Phone.java">extends를 활용한 VO </a></p>
+<p><a href = ""></a></p>
 <br>
 
 <h2>7월 19일 </h2>
