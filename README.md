@@ -88,7 +88,9 @@
 <br>
 
 <h2>7월 19일 </h2>
-<p><a > </a></p>
+<p><a href = "07.19/ex06_type_casting/CarTest.java">부모 클래스와 자식 클래스간의 형변환</a></p>
+<p><a href = "07.19/mystudy_ex01_exception/ExceptionEx.java">예외처리 : Exception, Try ~ catch </a></p>
+<p><a href = "07.19/mystudy_ex01_exception/Exception_throw_throws.java">예외처리 throw </a></p>
 <br>
 
 <h2>7월 20일 </h2>
