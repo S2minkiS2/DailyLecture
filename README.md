@@ -154,7 +154,17 @@
 <br>
 
 <h2>7월 31일 </h2>
+<p><a >Scanner5_guess 패키지 학습 </a></p>
+<p><a >Scanner5_guess 패키지 (다음 선택값 범위 표현) </a></p>
+<p><a >Scanner5_BankATM 실습  </a></p>
+<p><a >Scanner5_BankATM 실습 ++예외처리</a></p>
+<p><a >Random 클래스 객체 이용 </a></p>
+<p><a >Calendar클래스/ Date 클래스/ SimpleDateFormat 클래스 </a></p>
+<p><a >LocalDateTime </a></p>
+<p><a >Input, Output </a></p>
 <p><a > </a></p>
+<p><a > </a></p>
+
 <br>
 
 <h2>8월 1일 </h2>
