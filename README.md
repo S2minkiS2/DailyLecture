@@ -161,7 +161,7 @@
 <p><a >Random 클래스 객체 이용 </a></p>
 <p><a >Calendar클래스/ Date 클래스/ SimpleDateFormat 클래스 </a></p>
 <p><a >LocalDateTime </a></p>
-<p><a >Input, Output </a></p>
+<p><a href = "07.31/FileExam1.java">Input, Output_1 </a></p>
 <p><a > </a></p>
 <p><a > </a></p>
 
