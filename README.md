@@ -162,11 +162,50 @@
 <p><a >Calendar클래스/ Date 클래스/ SimpleDateFormat 클래스 </a></p>
 <p><a >LocalDateTime </a></p>
 <p><a href = "07.31/FileExam1.java">Input, Output_1 </a></p>
-<p><a > </a></p>
-<p><a > </a></p>
-
 <br>
 
 <h2>8월 1일 </h2>
+<p><a >절대경로 vs 상대경로 (feat. 폴더, 파일수정) </a></p>
+<p><a >FileInputStream 과 예외처리 (Ex1) </a></p>
+<p><a >vFileInputStream 의 read(byte) 대한 수업 (Ex2), (Ex3) </a></p>
+<p><a >FileInputStream Ex3_2 실습, FileOutputStream_Exam </a></p>
+<p><a >sourceFile(Input) --> targetFile(Output) </a></p>
+<p><a >FileReader, readChar(한글읽기) </a></p>
 <p><a > </a></p>
 <br>
+
+<h2>8월 2일 </h2>
+<p><a > </a></p>
+<br>
+
+<h2>8월 3일 </h2>
+<p><a > </a></p>
+<br>
+
+<h2>8월 4일 </h2>
+<p><a > </a></p>
+<br>
+
+<h2>8월 7일 </h2>
+<p><a > </a></p>
+<br>
+
+<h2>8월 8일 </h2>
+<p><a > </a></p>
+<br>
+
+<h2>8월 9일 </h2>
+<p><a > </a></p>
+<br>
+
+<h2>8월 10일 </h2>
+<p><a > </a></p>
+<br>
+<h2>8월 11일 </h2>
+<p><a > </a></p>
+<br>
+
+
+
+
+
