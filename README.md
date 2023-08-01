@@ -171,7 +171,7 @@
 <p><a >FileInputStream Ex3_2 실습, FileOutputStream_Exam </a></p>
 <p><a >sourceFile(Input) --> targetFile(Output) </a></p>
 <p><a >FileReader, readChar(한글읽기) </a></p>
-<p><a > </a></p>
+<p><a >읽고, 붙여쓰기 (문장) </a></p>
 <br>
 
 <h2>8월 2일 </h2>
