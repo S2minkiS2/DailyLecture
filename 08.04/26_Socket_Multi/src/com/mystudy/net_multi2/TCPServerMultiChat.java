@@ -75,14 +75,14 @@ public class TCPServerMultiChat {
 
 		@Override
 		public void run() {
-			// 생성될 때 : 필드에 사용자 명단(clients)에 추가
-			// 종료될 때 : 필드에 사용자 명단(clients)에서 삭제, 안그러면 오류가 난다.
+			// 생성될때 : 필드에 사용자 명단(clients)에 추가
+			// 종료될때 : 필드에 사용자 명단(clients)에서 제외(삭제) 처리
 			// 메시지 받고, 받은 메시지 전체에게 전달
 			System.out.println(">>> 읽기 전용 쓰레드 시작 -----");
-			
 			try {
-				// 사용자 등록 작업 
-				name = socket.getInetAddress().getHostAddress(); //IP주소를 이름으로 쓰겠다.
+				// 사용자 등록 작업
+				// (개인실습) name이 겹치면 수정하라 메시지를 보내주던가, 막던가 그런 방법도
+				name = socket.getInetAddress().getHostAddress();
 				clients.put(name, out);
 				
 				while (true) {
@@ -91,31 +91,40 @@ public class TCPServerMultiChat {
 						break;
 					}
 					System.out.println(name + "> " + msg);
+					
 					//접속자 전원에게 메시지 일괄 전송하기
-					sendToAll(msg);
+					sendToAll(name + "> " + msg);
 				}
 			} catch (IOException e) {
 				//e.printStackTrace();
 				System.out.println("[예외발생] " + e.getMessage());
 			} finally {
 				System.out.println(socket.getInetAddress().getHostAddress() + "> 클라이언트 종료");
+				// 종료할 때 접속자 명단에서 제외 (clients에서 삭제)
+				clients.remove(name);
+				String outMsg = "<" + name + ">님이 나갔습니다.";
+				sendToAll(outMsg);
+				System.out.println(outMsg);
 			}
-			
 		}
+		
 		//접속자 전원에게 메시지 일괄 전송하기
 		private void sendToAll(String msg) {
+			// chatGPT 해답안
+			try {
+				for (DataOutputStream clientStream : clients.values()) {
+					clientStream.writeUTF(msg); // 클라이언트에게 메시지 전송
+					clientStream.flush(); // 버퍼를 비워서 메시지 즉시 전송
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+				// 에러 처리 (예: 클라이언트와의 연결이 끊어졌을 경우, 해당 클라이언트 제거 등)
+			}
+			
 			
 		}
 		
+		//(개인실습) 내 메세지는 나에게 안보이게?????
 	}
 	
 } //end class
-
-
-
-
-
-
-
-
-
