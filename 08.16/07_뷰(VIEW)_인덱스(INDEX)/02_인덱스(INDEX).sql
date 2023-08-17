@@ -26,20 +26,40 @@ DROP INDEX 인덱스명;
 ALTER INDEX 인덱스명 REBUILD;
 ALTER [UNIQUE] INDEX 인덱스명 [ON 테이블명 (컬럼명, ...)] REBUILD;
 ************************************/
+--=====================================================================================
+--인덱스 생성 : BOOK 테이블의 출판사(PUBLISHER) 컬럼에 IX_BOOK_PUB 인덱스 만들기
+CREATE INDEX IX_BOOK_PUB ON BOOK (PUBLISHER); --ORDER BY PUBLISHER를 사용한 아래 코드의 테이블과 비슷한 모형임
+SELECT * FROM BOOK ORDER BY PUBLISHER;
 
+SELECT * FROM BOOK WHERE PUBLISHER = '굿스포츠'; --데이터가 수천수만개일 경우 INDEX가 없다면, 하나하나 순차비교하기 때문에
+                                               --속도 면에서 큰 문제가 발생한다.
+                                               -- 부분 검색
+                                                --F10을 누르면 '계획 설명' 창에서 인덱스 관련정보를 볼 수 있다.
+SELECT * FROM BOOK WHERE BOOKNAME = '축구의 이해'; -- 전체 검색
 
+-- 인덱스 생성 : 2개 컬럼 기준
+-- BOOK 테이블의 PUBLISHER 와 PRICE 컬럼을 대상으로 IX_BOOK_PUB_PRICE 인덱스 생성
+CREATE INDEX IX_BOOK_PUB_PRICE ON BOOK (PUBLISHER, PRICE);
+SELECT * FROM BOOK ORDER BY PUBLISHER, PRICE;
+SELECT * FROM BOOK WHERE PUBLISHER = '대한미디어' AND PRICE > 30000; --인덱스 사용 : F10
+SELECT * FROM BOOK WHERE PUBLISHER = '대한미디어'; --인덱스 사용
+SELECT * FROM BOOK WHERE PRICE >= 20000; -- 인덱스 사용 안함(안됨)
+SELECT * FROM BOOK WHERE PRICE >= 7000 AND PUBLISHER = '굿스포츠'; --순서가 바뀌어도 인덱스 사용
 
+----------------------------------------------
+--(주의) 인덱스가 있음에도 적용되지 않는 경우
+---- LIKE 사용시 또는 데이터가 가공된 경우
+SELECT * FROM BOOK WHERE PUBLISHER LIKE '대한%'; -- 인덱스 사용
+SELECT * FROM BOOK WHERE PUBLISHER LIKE '%미디어'; --인덱스 사용 안됨 (%뒤에 글자가 부분 검색으로 언제 나올지 모르므로.)
+SELECT * FROM BOOK WHERE PUBLISHER LIKE '%대한%'; --인덱스 적용 안함
 
+--원본 데이터를 가공(변형)하는 경우(인덱스 적용안됨)
+SELECT * FROM BOOK WHERE UPPER(PUBLISHER) = 'PEARSON'; --적용못함
+SELECT * FROM BOOK WHERE SUBSTR(PUBLISHER, 1, 2) = '대한'; --적용못함
 
-
-
-
-
-
-
-
-
-
+--인덱스 삭제
+DROP INDEX IX_BOOK_PUB;
+ 
 --======================================
 /* *** 인덱스 실습 ****************************
 마당서점 데이터베이스에서 다음 SQL 문을 수행하고 
@@ -53,9 +73,11 @@ ALTER [UNIQUE] INDEX 인덱스명 [ON 테이블명 (컬럼명, ...)] REBUILD;
 (4) 같은 질의에 대한 두 가지 실행 계획을 비교해보시오.
 (5) (3)번에서 생성한 인덱스를 삭제하시오.
 ******************************************/
+SELECT name FROM Customer WHERE name LIKE '박세리';
+CREATE INDEX ix_customber_name ON CUSTOMER (NAME);
 
+SELECT NAME FROM CUSTOMER WHERE NAME LIKE '%신수';
 
-
-
+DROP INDEX ix_customber_name;
 
 
