@@ -78,7 +78,7 @@ GRANT SELECT ON BOOK To MDGUEST; --MADANG 선택 후 자기 꺼라서 BOOK만 �
 REVOKE SELECT ON BOOK FROM MDGUEST; --마찬가지.
 --------------------------------------------------
 
---(MADANG) WITH GRANT OPTION : 해당 유저가 또 다른 유저에게 권한을 부여할 수 있도록 허용
+--(MADANG) WITH GRANT OPTION : 해당 유저가 또 다른 유저에게 해당 권한을 부여할 수 있도록 허용
 GRANT SELECT, UPDATE ON CUSTOMER TO MDGUEST WITH GRANT OPTION;
 REVOKE SELECT, UPDATE ON CUSTOMER FROM MDGUEST; --모든권한 모두 취소
 ---------
