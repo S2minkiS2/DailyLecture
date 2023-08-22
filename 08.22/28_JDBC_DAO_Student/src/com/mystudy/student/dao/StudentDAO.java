@@ -140,18 +140,3 @@ public class StudentDAO {
 	//DELETE : 키값(id)을 받아서 삭제 - delete : int
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
