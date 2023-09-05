@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form select</title>
+</head>
+<body>
+  <h2>from select 태그</h2>
+  <form>
+    좋아하는 운동은(하나만 선택)?<br>
+    <select name="exercise">
+      <optgroup label="상체">
+        <option  ion>푸쉬업</option>
+        <option value="pull-ups">풀업</option>
+      </optgroup>
+      <optgroup label="하체">
+        <option value="squat">스쿼트</option>
+        <option value="running">런닝</option>
+      </optgroup>
+    </select>
+    <hr>
+
+    좋아하는 영화 장르는?<br>
+    <select name="juanre" multiple><!--다중선택 가능-->
+
+        <option>로맨스</option>
+        <option>액션</option>
+        <option>공포</option>
+        <option>다큐멘터리</option>
+
+    </select>
+
+    <hr>
+    <input type="submit" value="전송">
+
+  </form>
+
+</body>
+</html>

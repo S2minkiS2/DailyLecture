@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>thead, tbody, tfoot</title>
+  <style>
+    table {
+      text-align: center;
+      border: 10px;
+      background-color: beige;
+    }
+    th {
+      background-color: rgb(218, 233, 84);
+    }
+  </style>
+</head>
+<body>
+  <h2>테이블(thad, tbody, tfoot)</h2>
+  <table border>
+    <caption>
+      영화 예매
+    </caption>
+    <thead>
+      <tr>
+        <th scope="row">영화</th>
+        <th scope="col">오펜하이머</th>
+        <th scope="col">너와의 시간</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">장소</th>
+        <td>경기도 용인 CGV</td>
+        <td>서울 잠실 CGV</td>
+      </tr>
+      <tr>
+        <th scope="row">시간</th>
+        <td>12 : 00</td>
+        <td>16 : 00</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th scope="row">요금</th>
+        <td>20,000원</td>
+        <td>19,000원</td>
+      </tr>
+    </tfoot>
+  </table>
+  <hr>
+
+  <h2>그림에 캡션 설정</h2>
+  <figure>
+    <figcaption>커피사진(위)</figcaption>
+      <img src="./img/FlatWhite.jpg" width="200" height="200">
+    <figcaption>커피사진(아래)</figcaption>
+    
+</body>
+</html>

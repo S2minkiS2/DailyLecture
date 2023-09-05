@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form input 태그</title>
+</head>
+<body>
+  <h2>HTML form input 태그</h2>
+  <form>
+    <fieldset>
+      <legend>로그인 정보</legend>
+      아이디 : <input type="text" name="userid" placeholder="아이디를 입력해주세요"><br>
+      암호 : <input type="password" name="password" placeholder="비밀번호 8~12자리" minlength="8" maxlength="12">
+    </fieldset>
+    
+    <fieldset>
+      <legend>가입자 정보</legend>
+      성명 : <input type="text" name="name"><br>
+      나이 : <input type="number" name="age" value="22" min="1" max="31" step="1"><br>
+      전화번호 : <input type="tel" name="tel" ><br>
+      이메일 : <input type="email" name="email"><br>
+      생일 : <input type="date" name="birth"><br>
+      
+    </fieldset>
+
+    <input type="submit" value="전송(요청)">
+  </form>
+</body>
+</html>
