@@ -1,3 +1,0 @@
-HELLOHello java!
-Hello java!
-java
