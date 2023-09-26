@@ -22,15 +22,17 @@ public class Ex01_Hello extends HttpServlet {
     	System.out.println(">> 생성자 실행(한번만)");
     	        
     }
-
+    
+    // 만들고 지우는 개념이 아니라, 오버라이딩해서 사용할 수 있다 라는 것임
+    
 	public void init(ServletConfig config) throws ServletException {
 		// 서블릿 객체가 처음 생성된 후 최초로 한 번만 실행
 		// 초기화 작업등을 처리할 때 사용
-		System.out.println(">> init() 실행(한번만)");
+		System.out.println(">> init() 실행(한번만) -> 서블릿 동작에 필요한 초기값 세팅 역할");
 	}
 
 	public void destroy() {	
-		// 서버에서 서블릿이 내려갈 떄(소멸될 때) destroy() 호출되고 삭제됨
+		// 서버에서 서블릿이 내려갈 때(소멸될 때) destroy() 서버메모리의 객체가 호출되고 삭제됨
 		// 사용된 자원 반납등의 후처리 작업시 사용
 		System.out.println(">> destroy() 실행");
 	}

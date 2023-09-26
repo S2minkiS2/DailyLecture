@@ -18,7 +18,7 @@ public class Ex04 extends HttpServlet {
 			throws ServletException, IOException {
 		System.out.println("> Ex04.doGet() 실행~~~");
 		
-		//request 객체로 부터 파라미터 값 추출
+		// request 객체로 부터 파라미터 값 추출
 		// getParameter(name) : 1개의 파라미터 값 추출(확인)
 		// getParameterValues(name) : 동일이름의 여러개 데이터 추출시 사용
 		// getParameterMap() : 파라미터 데이터 Map 형태로 받기
