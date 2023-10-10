@@ -135,5 +135,45 @@
 	<h3>sum : ${sum}</h3>
 	<hr>
 	
+	<%-- =========== for문 집합객체 처리 =========== --%>
+	
+<%
+	//로컬변수 이용한 출력 (향상된 for문)
+	String[] arr = {"홍길동0", "홍길동1", "홍길동2", "홍길동3", "홍길동4"};
+	for (String name : arr){
+		out.println(name + " - ");
+	}
+	
+	//JSTL, EL에서 사용하려면 위처럼 로컬변수에 저장하면 쓸 수 없기에, scope에 저장하자. (예로 page) 
+	//pageContext.setAttribute("attr_names", arr); 혹은
+	request.setAttribute("attr_names", arr);
+%>
+	<h2>forEach문 집합객체 처리</h2>	
+	<h3>배열값 출력 - JSTL forEach</h3>
+	<ol>
+		<c:forEach var="name" items="${attr_names}"> <%--스코프 변수 이용한 코드 --%>
+		<%--혹은 items="<%=name%>"  --%> <%--로컬변수 이용한 코드 --%>
+			<li>${name}</li>
+		</c:forEach>
+	</ol>
+	<hr><hr>
+	
+	<%-- ==== forTokens ====== --%>
+	<h2>forTokens 태그 : 문자열 자르기</h2>
+	<c:set var="names" value="짬뽕,볶음밥/콜라,싸이다/피자,치킨" />
+	<p>문자열데이터 : ${names }</p>
+	
+	<h3>forTokens 태그사용 / 구분자로 문자열 자르기</h3>
+	<c:forTokens var="name" items="${names} " delims=",">
+		<p>${name }</p>
+	</c:forTokens>
+	<hr>
+	
+	<h3>forTokens 태그사용 / 구분자로 문자열 자르기</h3>
+	<c:forTokens var="name" items="${names} " delims="/,">
+		<p>${name }</p>
+	</c:forTokens>
+	
+	
 </body>
 </html>
