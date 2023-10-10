@@ -28,6 +28,7 @@
 	// System.out.println("test : " + test); //컴파일 오류 why? page에 저장되어있기 때문, local변수아님.
 	System.out.println("test : " + pageContext.getAttribute("test"));
 	out.println(pageContext.getAttribute("test"));
+
 %>
 	<hr>
 	<h3>속성값 출력 : out</h3>
@@ -123,19 +124,15 @@
 	</c:forEach>
 	<hr>
 	
-	<p>1~10 까지의 합계 구하기(session)</p>
-	<c:set var="sum" value="0" scope="session" />
-	<c:forEach var="i" begin="1" end="10" step="1" >
-		${sessionScope.sum = Integer.parseInt(sum) + Integer.parseInt(i)}
-		
-	</c:forEach>
-	<hr>
-	
 	<p>1~10 까지의 합계 구하기(page)</p>
-	<c:set var="sum" value="0" />
+	<c:set var="sum" value="0" scope="page" />
 	<c:forEach var="i" begin="1" end="10" step="1" >
-		${sum = Integer.parseInt(sum) + Integer.parseInt(i)}
+		<c:set var="sum" value="${sum+i }" /> <%--연산처리만 --%>
+		 <%-- ${sessionScope.sum = Integer.parseInt(sum) + Integer.parseInt(i)} 더 안좋은 코드 --%>
+		 <%-- ${sum = sum + i } --%> <%-- 연산과정을 화면에 출력 --%>
+		 <%-- ${sum += 1} 은 문자열 붙이기 처리가 된다. (01 02 03 이렇게)--%>
 	</c:forEach>
+	<h3>sum : ${sum}</h3>
 	<hr>
 	
 </body>
