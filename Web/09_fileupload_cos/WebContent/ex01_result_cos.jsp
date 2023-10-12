@@ -52,5 +52,6 @@
 %>
 	<hr>
 	<h2>파일 다운로드</h2> <%--물리적으로 저장된 파일 다운로드-> 저장파일명 사용 --%>
+	<a href="download.jsp?path=upload&filename=<%=mr.getFilesystemName("filename") %>">다운로드할 파일(<%=mr.getOriginalFileName("filename") %>)</a>
 </body>
 </html>
