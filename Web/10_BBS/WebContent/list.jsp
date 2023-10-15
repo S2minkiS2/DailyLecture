@@ -57,7 +57,8 @@
 	System.out.println(">> 끝페이지(endPage) : " + p.getEndPage());
 	
 	//(개인적실습) 현재 페이지번호 사용 블록번호 구하고, 블록번호로 시작/끝 페이지 구하기
-	System.out.println("p : " + p);	
+	System.out.println("p : " + p);
+	// nowPage로 nowBlock 수 계산하고, 계산된 nowBlock값으로 블록에 시작페이지와 끝 페이지 숫자 구하
 %>
 <%
 	//=================================
@@ -173,7 +174,7 @@
 			<tr>
 				<td>${vo.bbsIdx }</td>
 				<td class="align-left">
-					<a href="veiw.jsp?bbsIdx=${vo.bbsIdx }&cPage=${pvo.nowPage}">${vo.subject }</a>
+					<a href="view.jsp?bbsIdx=${vo.bbsIdx }&cPage=${pvo.nowPage}">${vo.subject }</a>
 				</td>
 				<td>${vo.writer }</td>
 				<td>${vo.writeDate.substring(0, 10) }</td> 
@@ -205,7 +206,7 @@
 						</c:if>
 						<c:if test="${pageNo != pvo.nowPage }">
 							<li>
-								<a href="list.jsp?cPage=""${pageNo }">${pageNo }</a>
+								<a href="list.jsp?cPage=${pageNo }">${pageNo }</a>
 							</li>
 						</c:if>
 						
