@@ -49,6 +49,21 @@ public class BbsDAO {
 		return vo;
 	}
 	
+	//게시글 조회수 증가
+	public static void hitAdd (int bbsIdx) {
+		
+		SqlSession ss = DBService.getFactory().openSession();
+		
+		try {
+			ss.update("BBS.hitAdd", bbsIdx);
+			ss.commit(); // UPDATE는 commit()을 안해주면 변경내용이 저장되지 않는다.
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			ss.close();
+		}
+	}
+	
 	//===============================댓 글 =============================
 	
 	//게시물에 해당하는 댓글 리스트 가져오기(조회)
