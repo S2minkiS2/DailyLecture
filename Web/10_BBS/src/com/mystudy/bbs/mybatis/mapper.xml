@@ -34,6 +34,13 @@
         WHERE BBS_IDX = #{bbsIdx}
 	</select>
 	
+	<!-- 게시물 조회수 증가 -->
+	<update id="hitAdd" parameterType="int">
+		UPDATE BBS
+		SET HIT = HIT + 1
+		WHERE BBS_IDX = #{bbsIdx}
+	</update>
+	
 	<!--====== 댓글 관련 ===========-->
 	<!--게시글에 딸린 댓글 데이터 조회-->
 	<select id="commList" resultType="com.mystudy.bbs.vo.CommentVO" parameterType="int">
