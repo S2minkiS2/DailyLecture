@@ -2,7 +2,26 @@ package com.mystudy.bbs.vo;
 
 public class BbsVO {
 	private String bbsIdx, subject, writer, content, fileName,
-			oriName, pwd, writeDate, ip, hit;
+			oriName, pwd, writeDate, ip;
+	private int hit;
+	
+	
+	public BbsVO() {}
+
+	public BbsVO(String bbsIdx, String subject, String writer, String content, String fileName, String oriName,
+			String pwd, String writeDate, String ip, int hit) {
+		super();
+		this.bbsIdx = bbsIdx;
+		this.subject = subject;
+		this.writer = writer;
+		this.content = content;
+		this.fileName = fileName;
+		this.oriName = oriName;
+		this.pwd = pwd;
+		this.writeDate = writeDate;
+		this.ip = ip;
+		this.hit = hit;
+	}
 
 	public String getBbsIdx() {
 		return bbsIdx;
@@ -76,11 +95,11 @@ public class BbsVO {
 		this.ip = ip;
 	}
 
-	public String getHit() {
+	public int getHit() {
 		return hit;
 	}
 
-	public void setHit(String hit) {
+	public void setHit(int hit) {
 		this.hit = hit;
 	}
 
