@@ -14,7 +14,6 @@ public class ListCommand implements Command {
 
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		//1. DB연결하고 데이터 가져오기
 		List<EmployeeVO> list = EmployeeDAO.getList();
 		
@@ -24,8 +23,7 @@ public class ListCommand implements Command {
 		//3. 페이지 전환 - 응답할 페이지(list.jsp)로 포워딩(위임,전가)
 		//request.getRequestDispatcher("list.jsp").forward(request, response);
 		
-		return "list.jsp"; //위 업무만 처리하고 최종 이동페이지 안내할게요 
-		
+		return "list.jsp";
 	}
 
 }

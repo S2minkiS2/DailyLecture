@@ -14,7 +14,6 @@ public class DeptListCommand implements Command {
 
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		//1. 전달받은 파라미터값(부서코드: deptno) 추출(확인)
 		String deptno = request.getParameter("deptno");
 		
@@ -25,9 +24,9 @@ public class DeptListCommand implements Command {
 		request.setAttribute("list", list);
 		
 		//4. 응답페이지(deptList.jsp)로 위임 처리
-		// request.getRequestDispatcher("deptList.jsp").forward(request, response);
+		//request.getRequestDispatcher("deptList.jsp").forward(request, response);
 		
-		return "deptList.jsp"; //위에선 업무처리만
+		return "deptList.jsp";
 	}
 
 }
