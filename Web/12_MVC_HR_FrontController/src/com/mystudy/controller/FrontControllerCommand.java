@@ -1,7 +1,6 @@
 package com.mystudy.controller;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,8 +13,7 @@ import com.mystudy.model.command.DeptCommand;
 import com.mystudy.model.command.DeptListCommand;
 import com.mystudy.model.command.FullnameCommand;
 import com.mystudy.model.command.ListCommand;
-import com.mystudy.model.dao.EmployeeDAO;
-import com.mystudy.model.vo.EmployeeVO;
+import com.mystudy.model.command.SearchCommand;
 
 @WebServlet("/controller")
 public class FrontControllerCommand extends HttpServlet {
@@ -23,44 +21,37 @@ public class FrontControllerCommand extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println(">> FrontControllerCommand doPGet() 실행----");
+		System.out.println(">> FrontControllerCommand doGet() 실행----");
 		String type = request.getParameter("type");
 		System.out.println("> type : " + type);
 		
-		
-		Command command = null; //인터페이스인 Command 부모타입으로 선언하면 밑에서 모두 사용 가능.
+		Command command = null;
 		if ("list".equals(type)) {
-			//ListCommand command = new ListCommand();
 			command = new ListCommand();
 		}
-		
-		if("dept".equals(type)) {
-			//DeptCommand command = new DeptCommand();
+		if ("dept".equals(type)) {
 			command = new DeptCommand();
 		}
-		
-		if("deptList".equals(type)) {
+		if ("deptList".equals(type)) {
 			command = new DeptListCommand();
 		}
-		
-		if("fullname".equals(type)) {
+		if ("fullname".equals(type)) {
 			command = new FullnameCommand();
-			
-			
+		}
+		
+		if ("search".equals(type)) {
+			command = new SearchCommand();
 		}
 		
 		String path = command.exec(request, response);
 		request.getRequestDispatcher(path).forward(request, response);
+		
 	}
-	
-	
-	
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		System.out.println(">> FrontControllerCommand doPost() 실행----");
 		req.setCharacterEncoding("UTF-8");
 		doGet(req, resp);
 	}
-	
-	
 }
