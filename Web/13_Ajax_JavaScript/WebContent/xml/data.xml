@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+	<product>
+		<name>육개장</name>
+		<price>8000</price>
+	</product>	
+	<product>
+		<name>닭갈비</name>
+		<price>12000</price>
+	</product>	
+	<product>
+		<name>마라탕</name>
+		<price>10000</price>
+	</product>
+</products>
